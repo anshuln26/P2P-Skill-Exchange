@@ -172,7 +172,7 @@ export default function Discover() {
           ) : (
             <div style={{ padding: '60px 20px', textAlign: 'center', background: '#fff', border: '1px solid #e4e9e3', borderRadius: '7px' }}>
               <h3>No teachers found for this search</h3>
-              <p style={{ color: '#748278', fontSize: '13px', margin: '6px 0 16px' }}>
+              <p style={{ color: '#748278', fontSize: '14.5px', margin: '6px 0 16px' }}>
                 Try adjusting your search terms or clearing filters.
               </p>
               <button className="dark-btn" onClick={clearFilters}>

@@ -170,7 +170,7 @@ export default function Layout({ children }) {
                     <button
                       type="button"
                       className="text-button"
-                      style={{ fontSize: '11px' }}
+                      style={{ fontSize: '12.5px' }}
                       onClick={markAllRead}
                     >
                       Mark all read
@@ -190,14 +190,14 @@ export default function Layout({ children }) {
                         }}
                       >
                         <strong>{n.title}</strong>
-                        <p style={{ margin: '3px 0 0', fontSize: '11px' }}>{n.message}</p>
+                        <p style={{ margin: '3px 0 0', fontSize: '12.5px' }}>{n.message}</p>
                         <small>
                           {new Date(n.createdAt || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                         </small>
                       </div>
                     ))
                   ) : (
-                    <div style={{ padding: '24px 16px', textAlign: 'center', color: '#88948d', fontSize: '12px' }}>
+                    <div style={{ padding: '24px 16px', textAlign: 'center', color: '#88948d', fontSize: '13.5px' }}>
                       No notifications yet
                     </div>
                   )}
@@ -213,7 +213,7 @@ export default function Layout({ children }) {
               <button
                 type="button"
                 className="dark-btn"
-                style={{ padding: '6px 12px', fontSize: '12px' }}
+                style={{ padding: '6px 12px', fontSize: '13.5px' }}
                 onClick={() => setShowAuthModal(true)}
               >
                 Sign In

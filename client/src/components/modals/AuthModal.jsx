@@ -61,7 +61,7 @@ export default function AuthModal({ onClose }) {
 
         <div className="modal-body">
           {error && (
-            <div style={{ background: '#fdeeed', border: '1px solid #f9d2ce', color: '#b23b2b', padding: '10px 12px', borderRadius: '6px', fontSize: '12px', marginBottom: '14px' }}>
+            <div style={{ background: '#fdeeed', border: '1px solid #f9d2ce', color: '#b23b2b', padding: '10px 12px', borderRadius: '6px', fontSize: '13.5px', marginBottom: '14px' }}>
               {error}
             </div>
           )}
@@ -95,7 +95,7 @@ export default function AuthModal({ onClose }) {
 
           {tab === 'demo' ? (
             <div style={{ display: 'grid', gap: '10px' }}>
-              <p style={{ margin: '0 0 4px', fontSize: '12px', color: '#6a7870' }}>
+              <p style={{ margin: '0 0 4px', fontSize: '13.5px', color: '#6a7870' }}>
                 Instantly switch roles to test time-banking, requests, and double confirmations:
               </p>
               {demoAccounts.map((account) => (

@@ -85,13 +85,13 @@ export default function SessionDetailsModal({ session, onClose, onRefresh, onOpe
 
         <div className="modal-body">
           {error && (
-            <div style={{ background: '#fdeeed', border: '1px solid #f9d2ce', color: '#b23b2b', padding: '10px 12px', borderRadius: '6px', fontSize: '12px', marginBottom: '14px' }}>
+            <div style={{ background: '#fdeeed', border: '1px solid #f9d2ce', color: '#b23b2b', padding: '10px 12px', borderRadius: '6px', fontSize: '13.5px', marginBottom: '14px' }}>
               {error}
             </div>
           )}
 
           {message && (
-            <div style={{ background: '#edf5ed', border: '1px solid #d6e8d8', color: '#274e3e', padding: '10px 12px', borderRadius: '6px', fontSize: '12px', marginBottom: '14px', fontWeight: 600 }}>
+            <div style={{ background: '#edf5ed', border: '1px solid #d6e8d8', color: '#274e3e', padding: '10px 12px', borderRadius: '6px', fontSize: '13.5px', marginBottom: '14px', fontWeight: 600 }}>
               {message}
             </div>
           )}
@@ -106,7 +106,7 @@ export default function SessionDetailsModal({ session, onClose, onRefresh, onOpe
           <div style={{ display: 'flex', gap: '14px', alignItems: 'center', padding: '12px', background: '#f8faf8', borderRadius: '6px', marginBottom: '18px' }}>
             <span className="avatar large" style={{ background: '#bddbcf' }}>{partnerInitials}</span>
             <div>
-              <strong style={{ fontSize: '14px', display: 'block' }}>{partnerName}</strong>
+              <strong style={{ fontSize: '15.5px', display: 'block' }}>{partnerName}</strong>
               <small style={{ color: '#6e7b73' }}>
                 {isTeacher ? 'Learner (Spends credits)' : 'Teacher (Earns credits)'} · {session.durationHours || 1} hour session
               </small>
@@ -115,21 +115,21 @@ export default function SessionDetailsModal({ session, onClose, onRefresh, onOpe
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '18px' }}>
             <div style={{ border: '1px solid #edf0eb', padding: '10px', borderRadius: '6px' }}>
-              <small style={{ color: '#8a958e', display: 'block', fontSize: '10px', fontWeight: 700 }}>DATE & TIME</small>
-              <strong style={{ fontSize: '12px', color: '#27352d', marginTop: '2px', display: 'block' }}>{formattedDate}</strong>
+              <small style={{ color: '#8a958e', display: 'block', fontSize: '11.5px', fontWeight: 700 }}>DATE & TIME</small>
+              <strong style={{ fontSize: '13.5px', color: '#27352d', marginTop: '2px', display: 'block' }}>{formattedDate}</strong>
               <small style={{ color: '#6b7570' }}>{formattedTime}</small>
             </div>
             <div style={{ border: '1px solid #edf0eb', padding: '10px', borderRadius: '6px' }}>
-              <small style={{ color: '#8a958e', display: 'block', fontSize: '10px', fontWeight: 700 }}>CREDIT ESCROW</small>
-              <strong style={{ fontSize: '12px', color: '#27352d', marginTop: '2px', display: 'block' }}>{session.creditsHeld || session.durationHours || 1}.0 Credit</strong>
+              <small style={{ color: '#8a958e', display: 'block', fontSize: '11.5px', fontWeight: 700 }}>CREDIT ESCROW</small>
+              <strong style={{ fontSize: '13.5px', color: '#27352d', marginTop: '2px', display: 'block' }}>{session.creditsHeld || session.durationHours || 1}.0 Credit</strong>
               <small style={{ color: '#6b7570' }}>{session.status === 'COMPLETED' ? 'Settled' : 'Reserved in escrow'}</small>
             </div>
           </div>
 
           {session.meetingLink && (
             <div style={{ border: '1px solid #edf0eb', padding: '10px', borderRadius: '6px', marginBottom: '18px' }}>
-              <small style={{ color: '#8a958e', display: 'block', fontSize: '10px', fontWeight: 700 }}>MEETING DETAILS</small>
-              <a href={session.meetingLink} target="_blank" rel="noreferrer" style={{ color: '#286346', fontWeight: 600, fontSize: '12px', wordBreak: 'break-all' }}>
+              <small style={{ color: '#8a958e', display: 'block', fontSize: '11.5px', fontWeight: 700 }}>MEETING DETAILS</small>
+              <a href={session.meetingLink} target="_blank" rel="noreferrer" style={{ color: '#286346', fontWeight: 600, fontSize: '13.5px', wordBreak: 'break-all' }}>
                 {session.meetingLink}
               </a>
             </div>
@@ -137,8 +137,8 @@ export default function SessionDetailsModal({ session, onClose, onRefresh, onOpe
 
           {session.notes && (
             <div style={{ marginBottom: '18px' }}>
-              <small style={{ color: '#8a958e', display: 'block', fontSize: '10px', fontWeight: 700, marginBottom: '4px' }}>LEARNING GOALS / NOTES</small>
-              <p style={{ margin: 0, fontSize: '12px', color: '#56645c', background: '#fcfdfc', border: '1px solid #eef2ed', padding: '10px', borderRadius: '6px' }}>
+              <small style={{ color: '#8a958e', display: 'block', fontSize: '11.5px', fontWeight: 700, marginBottom: '4px' }}>LEARNING GOALS / NOTES</small>
+              <p style={{ margin: 0, fontSize: '13.5px', color: '#56645c', background: '#fcfdfc', border: '1px solid #eef2ed', padding: '10px', borderRadius: '6px' }}>
                 "{session.notes}"
               </p>
             </div>
@@ -148,12 +148,12 @@ export default function SessionDetailsModal({ session, onClose, onRefresh, onOpe
           <div className="confirmation-note" style={{ marginTop: '10px' }}>
             <CheckCircle2 size={18} style={{ flexShrink: 0 }} />
             <div>
-              <h3 style={{ fontSize: '13px' }}>Double-Confirmation Protection</h3>
-              <p style={{ fontSize: '11px', marginTop: '2px' }}>
+              <h3 style={{ fontSize: '14.5px' }}>Double-Confirmation Protection</h3>
+              <p style={{ fontSize: '12.5px', marginTop: '2px' }}>
                 Learner confirmed: <strong>{session.learnerConfirmed ? 'Yes ✓' : 'Pending'}</strong> · 
                 Teacher confirmed: <strong>{session.teacherConfirmed ? 'Yes ✓' : 'Pending'}</strong>
               </p>
-              <p style={{ fontSize: '11px', marginTop: '2px', color: '#749283' }}>
+              <p style={{ fontSize: '12.5px', marginTop: '2px', color: '#749283' }}>
                 Credits only release to teacher when both confirm completion.
               </p>
             </div>

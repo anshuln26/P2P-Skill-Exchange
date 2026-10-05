@@ -80,13 +80,13 @@ export default function AddSkillModal({ defaultType = 'teach', onClose, onSucces
             {success ? (
               <div style={{ textAlign: 'center', padding: '24px 0', color: '#274e3e' }}>
                 <CheckCircle size={44} style={{ margin: '0 auto 12px' }} />
-                <h3 style={{ fontSize: '18px', marginBottom: '6px' }}>Skill Added!</h3>
+                <h3 style={{ fontSize: '20px', marginBottom: '6px' }}>Skill Added!</h3>
                 <p style={{ margin: 0, color: '#607268' }}>Your profile has been updated successfully.</p>
               </div>
             ) : (
               <>
                 {error && (
-                  <div style={{ background: '#fdeeed', border: '1px solid #f9d2ce', color: '#b23b2b', padding: '10px 12px', borderRadius: '6px', fontSize: '12px', marginBottom: '14px' }}>
+                  <div style={{ background: '#fdeeed', border: '1px solid #f9d2ce', color: '#b23b2b', padding: '10px 12px', borderRadius: '6px', fontSize: '13.5px', marginBottom: '14px' }}>
                     {error}
                   </div>
                 )}

@@ -185,7 +185,7 @@ function Sessions() {
                     <button
                       type="button"
                       className="dark-btn"
-                      style={{ padding: '7px 11px', fontSize: '11px' }}
+                      style={{ padding: '7px 11px', fontSize: '12.5px' }}
                       onClick={(e) => handleQuickConfirm(e, item._id)}
                     >
                       <CheckCircle2 size={14} /> Confirm
@@ -195,7 +195,7 @@ function Sessions() {
                     <button
                       type="button"
                       className="outline-btn"
-                      style={{ padding: '7px 11px', fontSize: '11px' }}
+                      style={{ padding: '7px 11px', fontSize: '12.5px' }}
                       onClick={() => setRatingSession(item)}
                     >
                       <Star size={14} /> Review
@@ -740,7 +740,7 @@ function Messages() {
                 );
               })
             ) : (
-              <div style={{ textAlign: 'center', color: '#829088', margin: 'auto', fontSize: '13px' }}>
+              <div style={{ textAlign: 'center', color: '#829088', margin: 'auto', fontSize: '14.5px' }}>
                 Say hello to coordinate your session details!
               </div>
             )}

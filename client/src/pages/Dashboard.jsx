@@ -250,7 +250,7 @@ export default function Dashboard() {
                 />
               ))
             ) : (
-              <p style={{ color: '#748078', fontSize: '13px' }}>
+              <p style={{ color: '#748078', fontSize: '14.5px' }}>
                 Add more learning and teaching skills to generate smart matches.
               </p>
             )}
@@ -289,7 +289,7 @@ export default function Dashboard() {
                 );
               })
             ) : (
-              <div style={{ padding: '20px', textAlign: 'center', color: '#78847c', fontSize: '13px' }}>
+              <div style={{ padding: '20px', textAlign: 'center', color: '#78847c', fontSize: '14.5px' }}>
                 No recent transactions recorded.
               </div>
             )}

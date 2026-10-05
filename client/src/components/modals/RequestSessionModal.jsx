@@ -103,7 +103,7 @@ export default function RequestSessionModal({ person, onClose, onSuccess }) {
             {success ? (
               <div style={{ textAlign: 'center', padding: '24px 0', color: '#274e3e' }}>
                 <CheckCircle size={44} style={{ margin: '0 auto 12px' }} />
-                <h3 style={{ fontSize: '18px', marginBottom: '6px' }}>Session Requested!</h3>
+                <h3 style={{ fontSize: '20px', marginBottom: '6px' }}>Session Requested!</h3>
                 <p style={{ margin: 0, color: '#607268' }}>
                   {durationHours} credit has been reserved in escrow. Awaiting {person.name}'s confirmation.
                 </p>
@@ -115,7 +115,7 @@ export default function RequestSessionModal({ person, onClose, onSuccess }) {
                     {initials}
                   </span>
                   <div>
-                    <strong style={{ display: 'block', fontSize: '13px' }}>{person.name || 'Student Peer'}</strong>
+                    <strong style={{ display: 'block', fontSize: '14.5px' }}>{person.name || 'Student Peer'}</strong>
                     <small style={{ color: '#748078' }}>
                       Teaching · {person.rating || 5.0} ★ · {typeof person.mode === 'string' ? person.mode : 'Online and in person'}
                     </small>
@@ -123,7 +123,7 @@ export default function RequestSessionModal({ person, onClose, onSuccess }) {
                 </div>
 
                 {error && (
-                  <div style={{ background: '#fdeeed', border: '1px solid #f9d2ce', color: '#b23b2b', padding: '10px 12px', borderRadius: '6px', fontSize: '12px', marginBottom: '14px', display: 'flex', gap: '8px', alignItems: 'center' }}>
+                  <div style={{ background: '#fdeeed', border: '1px solid #f9d2ce', color: '#b23b2b', padding: '10px 12px', borderRadius: '6px', fontSize: '13.5px', marginBottom: '14px', display: 'flex', gap: '8px', alignItems: 'center' }}>
                     <AlertCircle size={16} flex="none" />
                     <span>{error}</span>
                   </div>
