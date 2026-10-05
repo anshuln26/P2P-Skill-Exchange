@@ -116,31 +116,25 @@ export default function Overview() {
             </div>
           </div>
 
-          <div style={{ background: '#fff', border: '1px solid #e4e9e3', borderRadius: '7px', padding: '22px' }}>
-            <div style={{ background: '#faecea', border: '1px solid #f6cfc9', borderRadius: '6px', padding: '14px', marginBottom: '14px' }}>
-              <strong style={{ display: 'block', color: '#a73e31', fontSize: '12px', marginBottom: '4px' }}>
-                THE CLASSIC BARTER DILEMMA (DOUBLE COINCIDENCE OF WANTS)
-              </strong>
-              <p style={{ margin: 0, fontSize: '12px', color: '#6e2b22', lineHeight: 1.5 }}>
+          <div className="barter-card">
+            <div className="barter-box dilemma">
+              <strong>THE CLASSIC BARTER DILEMMA (DOUBLE COINCIDENCE OF WANTS)</strong>
+              <p>
                 "Rahul wants to learn Guitar from Priya, but Priya doesn't want Rahul's Excel skill. Direct barter fails and no learning happens."
               </p>
             </div>
 
-            <div style={{ background: '#edf5ed', border: '1px solid #d5e8d8', borderRadius: '6px', padding: '14px' }}>
-              <strong style={{ display: 'block', color: '#2b6346', fontSize: '12px', marginBottom: '4px' }}>
-                THE TIME-BANK CREDIT SOLUTION (SKILLCYCLE)
-              </strong>
-              <p style={{ margin: 0, fontSize: '12px', color: '#274e3e', lineHeight: 1.5 }}>
+            <div className="barter-box solution">
+              <strong>THE TIME-BANK CREDIT SOLUTION (P2P SKILL EXCHANGE)</strong>
+              <p>
                 "Rahul teaches Excel to Sneha → Rahul earns +1 credit.<br />
                 Rahul spends that 1 credit learning Guitar from Priya.<br />
                 Priya later spends her credit learning Spanish from Amit."
               </p>
             </div>
 
-            <div style={{ marginTop: '18px', paddingTop: '14px', borderTop: '1px solid #edf0eb', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <span style={{ fontSize: '12px', color: '#68776f' }}>
-                Every participant's knowledge becomes spending power.
-              </span>
+            <div className="barter-footer">
+              <span>Every participant's knowledge becomes spending power.</span>
               <button className="dark-btn" onClick={() => navigate('/credits')}>
                 View credit ledger
               </button>

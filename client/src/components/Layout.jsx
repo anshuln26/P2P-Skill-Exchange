@@ -10,11 +10,14 @@ import {
   Search,
   Settings,
   ShieldAlert,
-  Info
+  Info,
+  Sun,
+  Moon
 } from 'lucide-react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useSocket } from '../context/SocketContext';
+import { useTheme } from '../context/ThemeContext';
 import AuthModal from './modals/AuthModal';
 
 const links = [
@@ -28,6 +31,7 @@ const links = [
 
 export default function Layout({ children }) {
   const { user, spendableCredits, isAuthenticated, isAdmin } = useAuth();
+  const { toggleTheme, resolvedTheme } = useTheme();
   const {
     notifications,
     unreadCount,
@@ -63,7 +67,7 @@ export default function Layout({ children }) {
       <aside className="sidebar">
         <NavLink to="/" className="brand">
           <span className="brand-mark"><BookOpen size={18} /></span>
-          <span>Skill<span>Cycle</span></span>
+          <span>P2P <span>Skill Exchange</span></span>
         </NavLink>
 
         <p className="nav-label">YOUR EXCHANGE</p>
@@ -124,7 +128,7 @@ export default function Layout({ children }) {
       <main>
         <header className="topbar">
           <div className="mobile-brand">
-            Skill<span>Cycle</span>
+            P2P <span>Skill Exchange</span>
           </div>
 
           <form className="search" onSubmit={handleSearchSubmit}>
@@ -137,6 +141,16 @@ export default function Layout({ children }) {
           </form>
 
           <div className="top-actions">
+            <button
+              type="button"
+              className="icon-button"
+              aria-label={`Switch to ${resolvedTheme === 'dark' ? 'light' : 'dark'} mode`}
+              title={`Switch to ${resolvedTheme === 'dark' ? 'light' : 'dark'} mode`}
+              onClick={toggleTheme}
+            >
+              {resolvedTheme === 'dark' ? <Sun size={19} style={{ color: '#f59e0b' }} /> : <Moon size={19} />}
+            </button>
+
             <button
               type="button"
               className="icon-button"

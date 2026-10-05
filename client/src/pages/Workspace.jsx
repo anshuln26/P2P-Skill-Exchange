@@ -213,9 +213,9 @@ function Sessions() {
             );
           })
         ) : (
-          <div style={{ padding: '50px 20px', textAlign: 'center', background: '#fff', border: '1px solid #e4e9e3', borderRadius: '7px' }}>
+          <div className="empty-state-box">
             <h3>No {activeTab} sessions</h3>
-            <p style={{ color: '#748078', fontSize: '13px', margin: '4px 0 16px' }}>
+            <p>
               {activeTab === 'upcoming'
                 ? 'You do not have any upcoming sessions scheduled.'
                 : `You currently have no ${activeTab} exchange requests.`}

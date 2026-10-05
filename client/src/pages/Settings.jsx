@@ -101,13 +101,12 @@ export default function Settings() {
                 <button
                   type="button"
                   key={account.email}
-                  className="test-user-chip"
-                  style={{ borderColor: isCurrent ? '#274e3e' : '#dce2dc', background: isCurrent ? '#edf5ef' : '' }}
+                  className={`test-user-chip ${isCurrent ? 'active' : ''}`}
                   onClick={() => handleDemoSwitch(account)}
                 >
                   <div>
                     <strong>{account.name} {isCurrent && '(Active)'}</strong>
-                    <small style={{ display: 'block', color: '#7a867f', marginTop: '2px' }}>
+                    <small style={{ display: 'block', opacity: 0.8, marginTop: '2px' }}>
                       {account.desc}
                     </small>
                   </div>
@@ -124,37 +123,37 @@ export default function Settings() {
           <p className="subcopy">Your display identity across the skill exchange community.</p>
 
           {statusMessage && (
-            <div style={{ background: '#edf5ed', border: '1px solid #d6e8d8', color: '#274e3e', padding: '10px 12px', borderRadius: '6px', fontSize: '12px', margin: '14px 0' }}>
+            <div style={{ background: 'var(--status-success-bg, #edf5ed)', border: '1px solid var(--status-success-border, #d6e8d8)', color: 'var(--status-success-text, #274e3e)', padding: '10px 12px', borderRadius: '6px', fontSize: '12px', margin: '14px 0' }}>
               {statusMessage}
             </div>
           )}
 
           {errorMessage && (
-            <div style={{ background: '#fdeeed', border: '1px solid #f9d2ce', color: '#b23b2b', padding: '10px 12px', borderRadius: '6px', fontSize: '12px', margin: '14px 0' }}>
+            <div style={{ background: 'var(--status-err-bg, #fdeeed)', border: '1px solid var(--status-err-border, #f9d2ce)', color: 'var(--status-err-text, #b23b2b)', padding: '10px 12px', borderRadius: '6px', fontSize: '12px', margin: '14px 0' }}>
               {errorMessage}
             </div>
           )}
 
           <form onSubmit={handleUpdateProfile} style={{ marginTop: '16px' }}>
-            <label style={{ display: 'block', fontSize: '11px', fontWeight: 700, color: '#55625a', marginBottom: '5px' }}>
+            <label style={{ display: 'block', fontSize: '11px', fontWeight: 700, marginBottom: '5px' }}>
               FULL NAME
             </label>
             <input
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              style={{ width: '100%', padding: '9px 11px', border: '1px solid #dce2dc', borderRadius: '6px', fontSize: '13px', marginBottom: '14px' }}
+              style={{ width: '100%', padding: '9px 11px', borderRadius: '6px', fontSize: '13px', marginBottom: '14px' }}
               required
             />
 
-            <label style={{ display: 'block', fontSize: '11px', fontWeight: 700, color: '#55625a', marginBottom: '5px' }}>
+            <label style={{ display: 'block', fontSize: '11px', fontWeight: 700, marginBottom: '5px' }}>
               EMAIL ADDRESS (READ-ONLY)
             </label>
             <input
               type="email"
               value={email}
               disabled
-              style={{ width: '100%', padding: '9px 11px', border: '1px solid #e5ebe5', borderRadius: '6px', fontSize: '13px', marginBottom: '16px', background: '#f8faf8', color: '#88948e' }}
+              style={{ width: '100%', padding: '9px 11px', borderRadius: '6px', fontSize: '13px', marginBottom: '16px', opacity: 0.7 }}
             />
 
             <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
