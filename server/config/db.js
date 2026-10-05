@@ -6,10 +6,13 @@ let mongoMemoryServer = null;
 export const connectDB = async () => {
   const uri = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/peer-skill-exchange';
   
+  const isCloudUri = uri.includes('mongodb+srv') || (!uri.includes('localhost') && !uri.includes('127.0.0.1'));
+  const timeoutMs = isCloudUri ? 10000 : 2500;
+
   try {
-    // Attempt standard connection with 2-second timeout
+    // Attempt connection with appropriate timeout (longer for cloud Atlas)
     await mongoose.connect(uri, {
-      serverSelectionTimeoutMS: 2000,
+      serverSelectionTimeoutMS: timeoutMs,
     });
     console.log(`[MongoDB] Connected to database: ${mongoose.connection.host}`);
   } catch (err) {
